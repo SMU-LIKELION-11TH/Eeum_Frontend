@@ -158,7 +158,7 @@ body{
     border-radius: 1.25rem;
     background: #232427;
     display: flex;
-    margin-top: 0.88rem;
+    margin-top: -3rem;
     margin-left: 52.06rem;
     cursor: pointer;
 }
@@ -457,11 +457,11 @@ body{
     opacity: 0.8;
 }
 
+.comment_btn:hover{
+    opacity: 0.8;
+}
+
 .comment_btn:active{
     position: relative;
     top: 2px;
-}
-
-.comment_btn:hover{
-    opacity: 0.8;
 }

@@ -363,4 +363,39 @@ body{
     line-height: normal;
 }
 
+/*플로팅 버튼 css 시작 부분*/
+#floating_button_wrap {
+    position: fixed; /* 화면 스크롤에 영향 받지 않고 고정 */
+    bottom: 20rem; /* 아래쪽으로 고정 */
+    right: 5rem; /* 오른쪽으로 고정 */
+    z-index: 100; /* 다른 요소 위에 표시 */
+}
 
+.floating_button {
+    width: 100px;
+    height: 100px;
+    background: gold;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s; /* 부드러운 애니메이션 추가 */
+}
+
+.floating_button:hover {
+    transform: scale(1.05); /* 마우스 호버 시 크기 약간 증가 */
+}
+
+.floating_button img {
+    margin-top: -1rem;
+    width: 60%;
+    height: 60%;
+}
+
+.floating_button_name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-right: 0.1rem;
+}
+/*플로팅 버튼 css 끝 부분*/

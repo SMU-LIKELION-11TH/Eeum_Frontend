@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const wordContainer = document.getElementById("wordContainer");
+    const commentTxt = document.querySelector(".comment_txt");
 
     // 예시 데이터 - 실제로는 서버에서 가져오는 데이터로 대체해야 합니다.
     const wordsData = [
@@ -52,8 +53,12 @@ document.addEventListener("DOMContentLoaded", function() {
         wordContainer.appendChild(wordItem);
     }
     
-    // 기존 데이터로 단어 카드 생성
-    wordsData.forEach(data => {
-        createWordCard(data);
-    });
+    if (wordsData.length === 0) {
+        commentTxt.style.display = "none"; // "질문한 단어가 등록되었습니다." 문구 감춤
+    } else {
+        commentTxt.style.display = "flex"; // "질문한 단어가 등록되었습니다." 문구 표시
+        wordsData.forEach(data => {
+            createWordCard(data);
+        });
+    }
 });
