@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이음 : 세대와 세대를 이어주는 단어 사전</title>
+    <script src="https://kit.fontawesome.com/77771fbbf3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/qna/detail_qna.css">
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="navWrap">
+            <div class="navFirst">
+                <a class="mainLogo" href="#"><img src="/static/img/icon/Logo.png" alt="로고 아이콘"></a>
+            </div>
+            <div class="navSecond">
+                <ul class="navList" >
+                    <li><a href="#">사전</a></li>
+                    <li><a href="#">게시판</a></li>
+                </ul>
+            </div>
+            <div class="userInfo">
+                <div class="navicon">
+                    <ul class="naviconList">
+                        <li>
+                            <a href="#"><img src="/static/img/icon/bell-solid 1.png" alt="종 아이콘"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/static/img/icon/book-bookmark-solid 1.png" alt="북마크 아이콘"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a href=""><img class="userProfile" src="/static/img/profile/원숭이.png" alt="유저프로필 사진"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main">
+            <div class="main_left">
+                <div class="main_mword">
+                    <div class="qna_card_container" id="qnaCardContainer">
+
+                    </div>
+                    <input class="comment_container" id="commentInput" style="font-size: 1.5rem;">
+                        <button class="comment_btn" id="comment_btn">
+                            <img src="/static/img/imoge/pencil_color 2.png">
+                            <p>댓글 등록</p>
+                        </button>
+                    </input>
+                    <a href="#" class="comment_txt">질문한 단어가 등록되었습니다.</a>
+                    <div class="word_container" id="wordContainer">
+                        
+                    </div>
+                    <a href="#" class="comment_sbm">등록된 댓글</a>
+                    <div class="qna_card_container" id="qnaCardContainer_answer">
+                        
+                        
+                    </div>
+                    <div class="submit_btn_container">
+                        <p>관련 단어 등록하고 경험치를 쌓아보세요!</p>
+                        <a href="#" class="submit_btn">등록하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="/static/js/navList_check.js"></script>
+<script src="/static/js/main_js/detail_qnacard.js"></script>
+<script src="/static/js/main_js/detail_word.js"></script>
+<script src="/static/js/main_js/detail_answer.js"></script>
+<script src="/static/img/imoge/smiling_face_with_heart-eyes_color 1.png"></script>
+</html>

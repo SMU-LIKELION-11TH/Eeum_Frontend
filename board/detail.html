@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이음 : 세대와 세대를 이어주는 단어 사전</title>
+    <script src="https://kit.fontawesome.com/77771fbbf3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/main_board/main_board_all.css">
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="navWrap">
+            <div class="navFirst">
+                <a class="mainLogo" href="#"><img src="/static/img/icon/Logo.png" alt="로고 아이콘"></a>
+            </div>
+            <div class="navSecond">
+                <ul class="navList">
+                    <li><a href="#">사전</a></li>
+                    <li><a href="#">게시판</a></li>
+                </ul>
+            </div>
+            <div class="userInfo">
+                <div class="navicon">
+                    <ul class="naviconList">
+                        <li>
+                            <a href="#"><img src="/static/img/icon/bell-solid 1.png" alt="종 아이콘"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/static/img/icon/book-bookmark-solid 1.png" alt="북마크 아이콘"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a href=""><img class="userProfile" src="/static/img/profile/원숭이.png" alt="유저프로필 사진"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="search">
+            <p>궁금한 단어를 검색하세요!</p>
+            <div class="search_btn">
+                <input type="text" id="searchInput" style="font-size: 1.5rem;">
+                <button type="button" id="searchButton">
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <path d="M19.7158 10.2486C19.7158 12.3998 19.0174 14.387 17.841 15.9993L23.7746 21.9375C24.3604 22.5233 24.3604 23.4748 23.7746 24.0606C23.1887 24.6465 22.2373 24.6465 21.6514 24.0606L15.7179 18.1224C14.1057 19.3035 12.1184 19.9971 9.9672 19.9971C4.58205 19.9971 0.218628 15.6337 0.218628 10.2486C0.218628 4.86342 4.58205 0.5 9.9672 0.5C15.3523 0.5 19.7158 4.86342 19.7158 10.2486ZM9.9672 16.9976C10.8535 16.9976 11.7311 16.823 12.5499 16.4838C13.3688 16.1447 14.1128 15.6475 14.7395 15.0208C15.3662 14.3941 15.8633 13.6501 16.2025 12.8313C16.5416 12.0125 16.7162 11.1349 16.7162 10.2486C16.7162 9.36228 16.5416 8.48466 16.2025 7.66584C15.8633 6.84701 15.3662 6.103 14.7395 5.4763C14.1128 4.8496 13.3688 4.35247 12.5499 4.0133C11.7311 3.67413 10.8535 3.49956 9.9672 3.49956C9.08091 3.49956 8.20329 3.67413 7.38446 4.0133C6.56564 4.35247 5.82163 4.8496 5.19493 5.4763C4.56822 6.103 4.0711 6.84701 3.73193 7.66584C3.39276 8.48466 3.21819 9.36228 3.21819 10.2486C3.21819 11.1349 3.39276 12.0125 3.73193 12.8313C4.0711 13.6501 4.56822 14.3941 5.19493 15.0208C5.82163 15.6475 6.56564 16.1447 7.38446 16.4838C8.20329 16.823 9.08091 16.9976 9.9672 16.9976Z" fill="#232427"/>
+                    </svg>
+                </button>
+                <div class="rword">
+                    <button type="button" onclick="registerWord();">
+                        <img src="/static/img/imoge/open_book_color 2.png">
+                        <p>단어 등록하기</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_left">
+                <div class="main_mword">
+                    <div class="option_container">
+                        <p id="resultTitle">요청한 단어 전체 보기</p>
+                        <select id="sortingSelect">
+                            <option value="recency">&nbsp;&nbsp;&nbsp;&nbsp;최신순</option>
+                            <option value="popularity">&nbsp;&nbsp;&nbsp;&nbsp;인기순</option>
+                        </select>
+                    </div>
+                    <div class="qna_card_container" id="qnaCardContainer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagenation">
+            <div class="word_container" id="qnaCardContainer">
+                <!-- 단어 카드가 동적으로 생성될 공간 -->
+            </div>
+            <div class="pagination_container" id="paginationContainer">
+                <!-- 페이지네이션 버튼이 동적으로 생성될 공간 -->
+            </div>
+        </div>
+</body>
+<script src="/static/js/navList_check.js"></script>
+<script src="/static/js/main_js/board_search.js"></script>
+<script src="/static/js/main_js/main_board.js"></script>
+<script src="/static/js/main_js/board_pagenation_select.js"></script>
+</html>

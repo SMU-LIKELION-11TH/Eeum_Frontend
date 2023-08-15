@@ -1,10 +1,10 @@
-//단어 카드 추가
-
 document.addEventListener("DOMContentLoaded", function() {
     const qnaCardContainer = document.getElementById("qnaCardContainer_answer");
+    const commentInput = document.getElementById("commentInput");
+    const commentBtn = document.getElementById("comment_btn");
 
-    // 예시 데이터 - 실제로는 서버에서 가져오는 데이터로 대체해야 합니다.
     const wordsData = [
+        // 기존 데이터들...
         {
             index: 1,
             profileImgSrc: "/static/img/profile/지렁이.png",
@@ -25,11 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
             questionTitle_two: "짤은 사진이니까 움직이는 사진이라는 뜻입니다.",
             answerCommentCount: 12,
         },
-        // ... 이하 데이터 추가
     ];
 
-    // 함수를 통해 단어 카드 생성
-    // 함수를 통해 Q&A 카드 생성
     function createQnaCard(data, container) {
         const qnaCard = document.createElement("div");
         qnaCard.classList.add("qna_card");
@@ -61,9 +58,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
         container.appendChild(qnaCard);
     }
-    
-    // 기존 데이터로 단어 카드 생성
+
+    // 버튼 클릭 시 댓글을 단어 카드로 추가하는 함수
+    function addComment() {
+        const commentContent = commentInput.value.trim();
+        
+        if (commentContent !== "") {
+            const newCardData = {
+                index: wordsData.length + 1, // 새로운 카드의 인덱스
+                profileImgSrc: "/static/img/profile/지렁이.png", // 사용자 프로필 이미지 경로
+                username: "사용자명", // 사용자명
+                date: getCurrentDate(), // 현재 날짜
+                time: getCurrentTime(), // 현재 시간
+                questionTitle: commentContent, // 댓글 내용을 질문 제목으로 사용
+                questionTitle_two: "", // 추가 질문 제목 (비움)
+                answerCommentCount: 0, // 초기 댓글 개수
+            };
+            
+            wordsData.push(newCardData);
+            createQnaCard(newCardData, qnaCardContainer);
+            
+            // 댓글 입력창 비우기
+            commentInput.value = "";
+        }
+    }
+
+    // 버튼 클릭 시 댓글 추가 함수 호출
+    commentBtn.addEventListener("click", addComment);
+
+    // 현재 날짜 반환 함수 (YYYY/MM/DD 형식)
+    function getCurrentDate() {
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+        const day = String(currentDate.getDate()).padStart(2, "0");
+        return `${year}/${month}/${day}`;
+    }
+
+    // 현재 시간 반환 함수 (HH:MM 형식)
+    function getCurrentTime() {
+        const currentTime = new Date();
+        const hours = String(currentTime.getHours()).padStart(2, "0");
+        const minutes = String(currentTime.getMinutes()).padStart(2, "0");
+        return `${hours}:${minutes}`;
+    }
+
     wordsData.forEach(data => {
-        createQnaCard(data, qnaCardContainer_answer);
+        createQnaCard(data, qnaCardContainer);
     });
 });
