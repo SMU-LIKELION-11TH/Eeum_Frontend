@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이음 : 세대와 세대를 이어주는 단어 사전</title>
+    <link rel="stylesheet" href="../static/css/landing/landing.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>    
+  <nav class="navBar">
+    <div class="navWrap">
+        <div class="navFirst">
+            <a class="mainLogo" href="../templates/main_templates/main.html"><img src="/static/img/icon/Logo.png" alt="로고 아이콘"></a>
+        </div>
+        <div class="navSecond">
+            <ul class="navList">
+                <li><a href="../templates/main_templates/main_dictionary_view.html">사전</a></li>
+                <li><a href="../templates/main_templates/main.html">게시판</a></li>
+            </ul>
+        </div>
+        <div class="loginBtn" onclick="onclickLogin()">
+            <div class="loginContent">
+                <img class="loginBtnImg"src="/static/img/kakao.png" alt="카카오톡 로고">
+                <p class="loginBtnTxt">카카오톡으로 시작하기</p>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="floating_button_wrap">
+  <div class="floating_button" onclick="onclickLogin()">
+    <p class="floating_button_name"> 카카오톡 로그인 하고 나의 세대 단어 등록하기</p>
+  </div>  
+</div>
+
+<div class="container">
+  <img class=container src="../static/img/landing.png" alt="">
+</div>
+
+<script src="/static/js/navList_check.js"></script>
+<script src="/static/js/login.js"></script>
+</body>
+</html>

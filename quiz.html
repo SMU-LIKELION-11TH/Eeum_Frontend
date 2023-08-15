@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이음 : 세대와 세대를 이어주는 단어 사전</title>
+    <link rel="stylesheet" href="../static/css/vocabulary/quiz.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+  <nav class="navBar">
+    <div class="navWrap">
+        <div class="navFirst">
+            <a class="mainLogo" href="#"><img src="../static/img/Logo.png" alt="로고 아이콘"></a>
+        </div>
+        <div class="navSecond">
+            <ul class="navList">
+                <li><a href="#">사전</a></li>
+                <li><a href="#">게시판</a></li>
+            </ul>
+        </div>
+        <div class="userInfo">
+            <div class="navicon">
+                <ul class="naviconList">
+                    <li>
+                        <a href="#"><img src="../static/img/icon/bell-solid 1.png" alt="종 아이콘"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../static/img/icon/book-bookmark-solid 1.png" alt="북마크 아이콘"></a>
+                    </li>
+                </ul>
+            </div>
+            <a href=""><img class="userProfile" src="../static/img/profile/원숭이.png" alt="유저프로필 사진"></a>
+        </div>
+    </div>
+</nav>
+
+  <div class="container">
+    <section id="quiz">
+      <!-- <div class="quizWrap">
+        <p id="title" class="quizQuestion">
+        </p>
+        <ul class="choiceContainer">
+          <li>
+            <button id="A" type="button" class="choiceCard">
+              <p class="choiceTxt"></p>
+            </button>
+          </li>
+          <li class="choiceCard">
+            <button id="B" type="button" class="choiceCard">
+              <p class="choiceTxt"></p>
+            </button>
+          </li>
+          <li class="choiceCard">
+            <button id="C" type="button" class="choiceCard">
+              <p class="choiceTxt"></p>
+            </button>
+          </li>
+        </ul>
+      </div> -->
+    </section>
+
+    <section id="result" hidden>
+      <div class="container">
+        <div class="scoreContainer">
+          <p id="score" class="quizScore">
+            80점
+          </p>
+          <svg class="quizSymbol" xmlns="http://www.w3.org/2000/svg" width="101" height="100" viewBox="0 0 101 100" fill="none">
+            <g clip-path="url(#clip0_262_2388)">
+              <mask id="mask0_262_2388" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="101" height="100">
+                <path d="M100.958 0H0.958496V100H100.958V0Z" fill="white"/>
+              </mask>
+              <g mask="url(#mask0_262_2388)">
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint0_radial_262_2388)"/>
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint1_radial_262_2388)"/>
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint2_radial_262_2388)"/>
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint3_radial_262_2388)" fill-opacity="0.6"/>
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint4_radial_262_2388)"/>
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint5_radial_262_2388)"/>
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint6_radial_262_2388)"/>
+                <path d="M50.9551 93.7431C80.1251 93.7431 94.7016 74.1572 94.7016 49.9966C94.7016 25.836 80.1251 6.25 50.9551 6.25C21.7848 6.25 7.2085 25.836 7.2085 49.9966C7.2085 74.1572 21.7848 93.7431 50.9551 93.7431Z" fill="url(#paint7_radial_262_2388)"/>
+                <g filter="url(#filter0_f_262_2388)">
+                  <path d="M80.646 56.25L60.3335 39.0625L79.0835 34.375L80.646 56.25Z" fill="url(#paint8_linear_262_2388)"/>
+                </g>
+                <g filter="url(#filter1_f_262_2388)">
+                  <path d="M43.146 45.3125L22.8335 43.75L36.896 31.25L43.146 45.3125Z" fill="url(#paint9_linear_262_2388)"/>
+                </g>
+                <g filter="url(#filter2_f_262_2388)">
+                  <path d="M52.521 18.75H58.771C63.771 23.75 62.9376 33.3334 61.896 37.5L52.521 40.625L57.2085 29.6875L52.521 18.75Z" fill="url(#paint10_radial_262_2388)"/>
+                </g>
+                <g filter="url(#filter3_f_262_2388)">
+                  <path d="M10.3335 25H16.5835C21.5835 30 20.7502 39.5834 19.7085 43.75L10.3335 50L15.021 35.9375L10.3335 25Z" fill="url(#paint11_radial_262_2388)"/>
+                </g>
+                <path d="M27.9082 40.2021L18.3766 47.6155C18.053 47.8674 17.5849 47.6114 17.622 47.2033L18.5554 36.9364C18.8073 34.1646 17.4007 31.5049 14.9677 30.1533L8.77203 26.7113C7.62137 26.0721 7.72837 24.3836 8.95056 23.8947L16.855 20.7329C19.0611 19.8505 20.6723 17.9135 21.1383 15.5835L22.6124 8.213C22.8614 6.96807 24.4659 6.60413 25.2277 7.61979L29.4907 13.3038C30.9539 15.2548 33.3236 16.3083 35.7523 16.0875L46.6664 15.0953C47.0708 15.0585 47.3273 15.5185 47.0836 15.8434L41.5033 23.284C40.0311 25.2471 39.6886 27.8357 40.5998 30.1141L45.0098 41.1386L33.6039 38.8577C31.6002 38.4568 29.5212 38.9477 27.9082 40.2021Z" fill="url(#paint12_linear_262_2388)" stroke="url(#paint13_linear_262_2388)" stroke-width="0.5"/>
+                <path d="M74.0085 40.2021L83.5401 47.6155C83.8639 47.8674 84.332 47.6114 84.2948 47.2033L83.3614 36.9364C83.1095 34.1646 84.5161 31.5049 86.9492 30.1533L93.1448 26.7113C94.2954 26.0721 94.1885 24.3836 92.9664 23.8947L85.062 20.7329C82.8557 19.8505 81.2445 17.9135 80.7786 15.5835L79.3045 8.213C79.0554 6.96807 77.4511 6.60413 76.6892 7.61979L72.4261 13.3038C70.9629 15.2548 68.5932 16.3083 66.1645 16.0875L55.2504 15.0953C54.846 15.0585 54.5895 15.5185 54.8332 15.8434L60.4136 23.284C61.8857 25.2471 62.2282 27.8357 61.317 30.1141L56.907 41.1386L68.3129 38.8577C70.3167 38.4568 72.3957 38.9477 74.0085 40.2021Z" fill="url(#paint14_linear_262_2388)" stroke="url(#paint15_linear_262_2388)" stroke-width="0.5"/>
+                <path d="M50.9585 81.25C22.8335 81.25 22.8335 53.125 22.8335 53.125H79.0835C79.0835 53.125 79.0835 81.25 50.9585 81.25Z" fill="url(#paint16_radial_262_2388)"/>
+                <path d="M25.9585 54.6875V53.125H75.9585V54.6875C75.9585 56.4134 74.5594 57.8125 72.8335 57.8125H29.0835C27.3576 57.8125 25.9585 56.4134 25.9585 54.6875Z" fill="url(#paint17_linear_262_2388)"/>
+              </g>
+            </g>
+            <defs>
+              <filter id="filter0_f_262_2388" x="59.3335" y="33.375" width="22.3125" height="23.875" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_262_2388"/>
+              </filter>
+              <filter id="filter1_f_262_2388" x="21.8335" y="30.25" width="22.3125" height="16.0625" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_262_2388"/>
+              </filter>
+              <filter id="filter2_f_262_2388" x="51.521" y="17.75" width="12.165" height="23.875" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_262_2388"/>
+              </filter>
+              <filter id="filter3_f_262_2388" x="9.3335" y="24" width="12.165" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_262_2388"/>
+              </filter>
+              <radialGradient id="paint0_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80.646 28.125) rotate(132.839) scale(117.198)">
+                <stop stop-color="#FFF478"/>
+                <stop offset="0.474827" stop-color="#FFB02E"/>
+                <stop offset="1" stop-color="#F70A8D"/>
+              </radialGradient>
+              <radialGradient id="paint1_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80.646 28.125) rotate(131.878) scale(121.715)">
+                <stop stop-color="#FFF478"/>
+                <stop offset="0.474827" stop-color="#FFB02E"/>
+                <stop offset="1" stop-color="#F70A8D"/>
+              </radialGradient>
+              <radialGradient id="paint2_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.9585 39.0625) rotate(101.31) scale(55.7706 71.4316)">
+                <stop offset="0.787821" stop-color="#F59639" stop-opacity="0"/>
+                <stop offset="0.972509" stop-color="#FF7DCE"/>
+              </radialGradient>
+              <radialGradient id="paint3_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(57.2085 43.75) rotate(135) scale(128.163)">
+                <stop offset="0.314853" stop-opacity="0"/>
+                <stop offset="1"/>
+              </radialGradient>
+              <radialGradient id="paint4_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.9585 53.125) rotate(77.692) scale(87.9591)">
+                <stop offset="0.507903" stop-color="#7D6133" stop-opacity="0"/>
+                <stop offset="1" stop-color="#715B32"/>
+              </radialGradient>
+              <radialGradient id="paint5_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(52.521 51.5625) rotate(55.7131) scale(41.6047 30.1572)">
+                <stop stop-color="#FFB849"/>
+                <stop offset="1" stop-color="#FFB847" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="paint6_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(65.021 56.25) rotate(9.86581) scale(36.4769)">
+                <stop stop-color="#FFA64B"/>
+                <stop offset="0.900412" stop-color="#FFAE46" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="paint7_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(55.646 46.875) rotate(43.9708) scale(184.54)">
+                <stop offset="0.185425" stop-opacity="0"/>
+                <stop offset="1" stop-opacity="0.4"/>
+              </radialGradient>
+              <linearGradient id="paint8_linear_262_2388" x1="74.396" y1="35.9375" x2="69.1276" y2="45.835" gradientUnits="userSpaceOnUse">
+                <stop offset="0.370082" stop-color="#EC812A"/>
+                <stop offset="1" stop-color="#FBA84C" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="paint9_linear_262_2388" x1="33.771" y1="35.9375" x2="32.991" y2="43.8275" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#C85F27"/>
+                <stop offset="1" stop-color="#C85F27" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="paint10_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(63.4585 31.25) rotate(146.31) scale(16.901 16.901)">
+                <stop offset="0.116396" stop-color="#EC812A"/>
+                <stop offset="1" stop-color="#FBA84C" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="paint11_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.8335 40.625) rotate(158.199) scale(16.8286)">
+                <stop stop-color="#CC7521"/>
+                <stop offset="1" stop-color="#E6872B" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="paint12_linear_262_2388" x1="24.3958" y1="3.12519" x2="32.2083" y2="46.8752" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#7912B2"/>
+                <stop offset="1" stop-color="#CF1DA1"/>
+              </linearGradient>
+              <linearGradient id="paint13_linear_262_2388" x1="47.8333" y1="18.7502" x2="27.5208" y2="26.5627" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A82D9C"/>
+                <stop offset="1" stop-color="#BF33B1" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="paint14_linear_262_2388" x1="69.7085" y1="7.81269" x2="71.271" y2="45.3127" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#7912B2"/>
+                <stop offset="1" stop-color="#CF1DA1"/>
+              </linearGradient>
+              <linearGradient id="paint15_linear_262_2388" x1="93.146" y1="18.7502" x2="74.396" y2="20.3127" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#B51AA6"/>
+                <stop offset="1" stop-color="#BF33B1" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="paint16_radial_262_2388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.9585 87.5) rotate(-90) scale(34.375 68.75)">
+                <stop stop-color="#F70A8D"/>
+                <stop offset="1" stop-color="#89029C"/>
+              </radialGradient>
+              <linearGradient id="paint17_linear_262_2388" x1="50.9585" y1="53.125" x2="50.9585" y2="57.8125" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#D5A8FE"/>
+                <stop offset="1" stop-color="white"/>
+              </linearGradient>
+              <clipPath id="clip0_262_2388">
+                <rect width="100" height="100" fill="white" transform="translate(0.958496)"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="scoreWrap">
+            <p class="scoreContent">
+              5문제 중 4문제 맞췄어요!
+            </p>
+            <p class="expContent">
+              (경험치 40이 적립되었습니다.)
+            </p>
+          </div>
+          <input type="button" class="wordBrowserBtn" value="단어장으로 돌아가기" onclick="location.href='http://127.0.0.1:5501/templates/myPage.html'">
+        </div>
+
+
+        <div class="reviewContainer">
+            <p class="reviewTxt">
+                퀴즈 단어 복습하기
+            </p>
+            <ul id="review" class="reviewWordList">
+              <!-- <ul class="word">
+                <li class="word_name">
+                    <p>~라고 할뻔</p>
+                    <img src="../static/img/age/age_10.png">
+                </li>
+                <li class="word_what"><p>하고싶은 말 뒤에 쓴다</p></li>
+                <li class="word_heart">
+                  <svg class="userWordLikeHeart" xmlns="http://www.w3.org/2000/svg" width="1.233rem" height="1rem" viewBox="0 0 21 16" fill="none">
+                    <path d="M9.55806 15.5646L9.46174 15.4804L2.71122 9.52724C1.52834 8.48442 0.85791 7.02082 0.85791 5.4877V5.36696C0.85791 2.79102 2.78443 0.580988 5.45073 0.0980001C6.96882 -0.180084 8.5216 0.152885 9.75842 0.979818C10.1052 1.21399 10.4288 1.48476 10.7217 1.79577C10.8835 1.62014 11.0569 1.45915 11.2418 1.30913C11.3844 1.19204 11.5308 1.08227 11.6849 0.979818C12.9218 0.152885 14.4745 -0.180084 15.9926 0.0943412C18.6589 0.577329 20.5854 2.79102 20.5854 5.36696V5.4877C20.5854 7.02082 19.915 8.48442 18.7321 9.52724L11.9816 15.4804L11.8853 15.5646C11.5693 15.8427 11.1532 16 10.7217 16C10.2901 16 9.87401 15.8463 9.55806 15.5646ZM10.0705 3.7387C10.0551 3.72772 10.0435 3.71309 10.032 3.69845L9.34614 2.96665L9.34229 2.96299C8.45224 2.01531 7.10753 1.58355 5.7975 1.82139C4.00199 2.14704 2.70737 3.63259 2.70737 5.36696V5.4877C2.70737 6.53052 3.16588 7.52942 3.97116 8.23927L10.7217 14.1925L17.4722 8.23927C18.2775 7.52942 18.736 6.53052 18.736 5.4877V5.36696C18.736 3.63625 17.4414 2.14704 15.6497 1.82139C14.3397 1.58355 12.9911 2.01897 12.1049 2.96299C12.1049 2.96299 12.1049 2.96299 12.1011 2.96665C12.0972 2.97031 12.1011 2.96665 12.0972 2.97031L11.4114 3.70211C11.3998 3.71675 11.3844 3.72773 11.3728 3.74236C11.1995 3.90702 10.9644 3.99849 10.7217 3.99849C10.4789 3.99849 10.2439 3.90702 10.0705 3.74236V3.7387Z" fill="#232427"/>
+                  </svg>
+                    <p>24</p>
+                </li>
+              </ul> -->
+            </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../static/js/navList_check.js"></script>
+  <script src="../static/js/vocabulary/quiz_data.js"></script>
+  <script src="../static/js/vocabulary/quiz_result.js"></script>
+</body>
+</html>
