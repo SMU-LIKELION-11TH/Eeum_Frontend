@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} /* 전체 font css */
+
+*{
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+    list-style: none;
+} /* 전체 font css 입히기 */
+
+body {
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    min-height: 100vh;
+    margin: 0;
+} /* 가운데 정렬 및 자리잡기 css */
+
+.navBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
+}
+
+.navWrap {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.navFirst {
+    flex: 1;
+}
+
+.navSecond {
+    flex: 1;
+    font-weight: bold;
+}
+
+
+/* nav icon list를 수평으로 표시하기 위해 수정 */
+.navicon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.naviconList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.naviconList li img {
+    width: 30px;
+    height: 32px;
+    fill: #232427;
+}
+
+
+.navList li {
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFF;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.navList li.selected{
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFE173;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.mainLogo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li {
+    white-space: nowrap;
+}
+
+.navList li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 4.5rem;
+}
+
+.userProfile {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+
+.question_detail_container{
+    max-width: 768px; /* 최대 가로 폭을 768px로 제한 */
+    padding: 1rem; /* 컨테이너 주위에 약간의 간격을 추가*/
+    text-align: left; /* 컨테이너 안의 요소들을 왼쪽 정렬*/
+    position: relative;
+    top:-30px; /* 컨테이너를 위로 옮기기 */
+}
+
+    
+.question_detail_header p{
+    color: black;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 580;
+    line-height: 130%;
+    /* 2.6rem */
+}
+
+.question_detail_input {
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.5rem;
+    width: 30rem;
+    height: 1.2rem;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2); /* 그림자 이 수치로 통일 */
+    background: #FFF;
+} /* 단어 등록 입력창 CSS */
+
+.question_detail_header p strong {
+    font-weight: 700;
+} /*이음 강조*/
+
+
+.readNotices {
+    display: inline-flex;
+    padding: 0.1rem 3.0rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    background:black;
+    margin-bottom: 1rem;
+
+}
+.readNotices p {
+    color: #FFF;
+    font-family: 'Pretendard-Regular';
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    cursor: default;
+    /* 1.3rem */
+}
+
+/* 팝업 css 시작*/
+.popup{
+    visibility: hidden;
+    position: absolute;
+    margin-top: 12px;
+    left: 0;
+    top: -5; /* 팝업이 .readNotices 요소 아래에 위치하도록 설정하고 여유 공간 확보 */
+    right: 0;
+    margin-left: 26%;
+    padding: 1rem 1rem;
+    width: 49rem;
+    line-height: 2rem;
+    border-radius: 5px;
+    color: black;
+    font-weight: 100;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 1.5px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* 팝업의 z-index를 설정하여 다른 요소보다 앞에 표시됩니다. */
+    display: flex; /* Flex 컨테이너로 설정합니다. */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    pointer-events: none; /* 팝업을 마우스 이벤트에서 제외합니다. */
+}
+
+.readNotices:hover+.popup {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    transform: translateX(0); /* 팝업을 이동하지 않고 원래 위치에 보이도록 합니다. */    
+}
+/* 주의 사항 열람하기 박스 CSS */
+
+.question_detail_question{
+    font-weight: bold;
+}
+
+#question_detail_nextbtn:hover {
+    background-color: #FFD87D;
+}
+
+.question_detail_question textarea {
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 0.9rem 1rem;
+    height: 8rem;
+    border-radius: 1.1rem;
+    font-size: 18px;
+    box-shadow: 1px 1px 1.5px 1px rgba(0, 0, 0, 0.2);
+}/*textarea CSS*/
+
+/* textarea-length span 오른쪽 배치 CSS*/
+.question_detail_text-length{
+    margin-top: -1rem;
+    float: right;
+    margin-bottom: 1rem;
+}
+
+#question_detail_submitbtn{
+    display: inline-block;
+    width: 44rem;
+    padding: 0.7rem 0.5rem;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    background-color: #FFE173;
+    box-shadow: 1px 1px 1.5px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#question_detail_submitbtn:hover {
+    background-color: #FFD87D; /* 마우스를 올렸을 때의 배경색 */
+} /* 질문 작성 제출 버튼 hover*/
+
+#question_detail_submitbtn[disabled] {
+    background-color: lightgray;
+    cursor: default;
+}
+    
+#question_detail_submitbtn[disabled]:hover{ 
+    background-color: lightgray;
+    cursor: default;
+}

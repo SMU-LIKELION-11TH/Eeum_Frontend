@@ -7,63 +7,32 @@
     <link rel="stylesheet" href="../static/css/myPage/level_detail.css">
 </head>
 <body>
-  <div class="navBar">
-    <ul class="navList">
-        <li class="navFirst">
-            <a href="#">
-                <img src="../static/img/Logo.png" alt="mainLogo">
-            </a>
-        </li>
-        <div class="navWrap">
-            <li>
-                <ul class="navSecond">
-                    <li>
-                        <a class="navDicBtn" href="#">
-                            사전
-                        </a>
-                    </li>
-                    <li>
-                        <a class="navBoardBtn" href="#">
-                            게시판
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <ul class="navThird">
-                    <li class="navAlert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="36" viewBox="0 0 33 36" fill="none">
-                            <g clip-path="url(#clip0_262_3877)">
-                              <path d="M16.7086 0C15.4641 0 14.4586 1.00547 14.4586 2.25V3.6C9.3258 4.64062 5.45861 9.18281 5.45861 14.625V15.9469C5.45861 19.2516 4.24221 22.4438 2.04846 24.9187L1.52815 25.5023C0.937521 26.1633 0.796896 27.1125 1.15549 27.9211C1.51408 28.7297 2.32268 29.25 3.20861 29.25H30.2086C31.0945 29.25 31.8961 28.7297 32.2617 27.9211C32.6274 27.1125 32.4797 26.1633 31.8891 25.5023L31.3688 24.9187C29.175 22.4438 27.9586 19.2586 27.9586 15.9469V14.625C27.9586 9.18281 24.0914 4.64062 18.9586 3.6V2.25C18.9586 1.00547 17.9531 0 16.7086 0ZM19.8938 34.6852C20.7375 33.8414 21.2086 32.6953 21.2086 31.5H16.7086H12.2086C12.2086 32.6953 12.6797 33.8414 13.5235 34.6852C14.3672 35.5289 15.5133 36 16.7086 36C17.9039 36 19.05 35.5289 19.8938 34.6852Z" fill="#232427"/>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_262_3877">
-                                <rect width="31.5" height="36" fill="white" transform="translate(0.958496)"/>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                    </li>
-                    <li class="navVoca">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="36" viewBox="0 0 32 36" fill="none">
-                            <g clip-path="url(#clip0_168_1828)">
-                              <path d="M0.212158 6.75C0.212158 3.02344 3.2356 0 6.96216 0H13.7122V13.4086C13.7122 14.3508 14.802 14.8781 15.5403 14.2875L19.3372 11.25L23.134 14.2875C23.8723 14.8781 24.9622 14.3508 24.9622 13.4086V0H27.2122H29.4622C30.7067 0 31.7122 1.00547 31.7122 2.25V24.75C31.7122 25.9945 30.7067 27 29.4622 27V31.5C30.7067 31.5 31.7122 32.5055 31.7122 33.75C31.7122 34.9945 30.7067 36 29.4622 36H27.2122H6.96216C3.2356 36 0.212158 32.9766 0.212158 29.25V6.75ZM4.71216 29.25C4.71216 30.4945 5.71763 31.5 6.96216 31.5H24.9622V27H6.96216C5.71763 27 4.71216 28.0055 4.71216 29.25Z" 
-                              fill="#232427"/>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_168_1828">
-                                <rect width="31.5" height="36" fill="white" transform="translate(0.212158)"/>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                    </li>
-                    <li>
-                        <img class="userProfile" src="../static/img/profile/원숭이.png" alt="원숭이">
-                    </li>
-                </ul>
-            </li>
+  <nav class="navBar">
+    <div class="navWrap">
+        <div class="navFirst">
+            <a class="mainLogo" href="#"><img src="/static/img/icon/Logo.png" alt="로고 아이콘"></a>
         </div>
-    </ul>
-</div>
+        <div class="navSecond">
+            <ul class="navList">
+                <li><a href="#">사전</a></li>
+                <li><a href="#">게시판</a></li>
+            </ul>
+        </div>
+        <div class="userInfo">
+            <div class="navicon">
+                <ul class="naviconList">
+                    <li>
+                        <a href="#"><img src="/static/img/icon/bell-solid 1.png" alt="종 아이콘"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="/static/img/icon/book-bookmark-solid 1.png" alt="북마크 아이콘"></a>
+                    </li>
+                </ul>
+            </div>
+            <a href=""><img class="userProfile" src="/static/img/profile/원숭이.png" alt="유저프로필 사진"></a>
+        </div>
+    </div>
+</nav>
 
     <div class="container">
         <div class="levelContainer">
@@ -81,5 +50,6 @@
         </div>
         <input type="button" class="myBrowserBtn" value="마이페이지로 돌아가기">
     </div>
+    <script src="../static/js/navList_check.js"></script>
 </body>
 </html>

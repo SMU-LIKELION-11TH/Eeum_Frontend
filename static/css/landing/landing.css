@@ -22,110 +22,127 @@ body{
     margin: 0;
 }
 
-
-.navBar{
-    z-index: 2;
+.navBar {
+    z-index: 1;
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    /* gap: 39.0625rem; */
     top: 0;
     left: 0;
     width: 100%;
-    height: 14.0741vh;
+    height: 10vh;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
 }
 
-.navList{
+.navWrap {
     display: flex;
+    gap: 4rem;
     align-items: center;
-    gap: 39.0625rem;
+    width: 100%;
+    padding: 0 2rem;
 }
 
-.navList li{
+.navFirst {
+    flex: 1;
+}
+
+.navSecond {
+    flex: 1;
+    font-weight: bold;
+}
+
+/* nav icon list를 수평으로 표시하기 위해 수정 */
+.navicon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.naviconList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.naviconList li img {
+    width: 30px;
+    height: 32px;
+    fill: #232427;
+}
+
+
+.navList li {
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFF;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.navList li.selected{
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFE173;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.mainLogo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li {
     white-space: nowrap;
-    cursor: pointer;
 }
 
-
-.navSecond{
-    display: flex;
-    flex-direction: row;
-    gap: 3.56rem;
-    /* margin-left: 39.06rem;
-    margin-right: 28.88rem; */
-}
-
-.navThird{
-    display: flex;
-    flex-direction: row;
-    gap: 2.19rem;
-    align-items: center;
-}
-
-.navWrap{
-    display: flex;
-    flex-direction: row;
-    gap: 28.875rem;
-    align-items: center;
-}
-
-.navDicBtn{
-    display: flex;
-    padding: 0.625rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-
-    color: #232427;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 130%; /* 2.6rem */
-}
-
-.navBoardBtn{
-    display: flex;
-    padding: 0.625rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-
-    color: #232427;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 130%; /* 2.6rem */
-}
-
-.mainLogo{
-    width: 4rem;
-    height: 2.09325rem;
-}
-
-.userInfo{
-    display: flex;
-    align-items: center;
-    gap: 2.1875rem;
-}
-
-.userProfile{
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 4.5rem;
+.navList li a {
+    text-decoration: none;
+    color: #333;
 }
 
 .loginBtn{
     border-radius: 1.25rem;
     background: #FFE173;
     filter: drop-shadow(0px 4px 4px rgba(160, 160, 160, 0.25));
-    
-    display: flex;
-    padding: 0rem 1.875rem;
     align-items: center;
+    padding: 0rem 0.95rem;
     gap: 1rem;
+    cursor: pointer;
+}
+
+.loginBtn:hover{
+    opacity: 0.8;
+}
+
+.loginBtn:active{
+    position: relative;
+    top: 2px;
+}
+
+.loginContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.loginBtnImg{
+    width: 1.12rem;
+    height: 1.12rem;
 }
 
 .loginBtnTxt{
@@ -133,8 +150,7 @@ body{
     margin-bottom: 0.9rem;
     color: #232427;
     text-align: center;
-    font-size: 1.25rem;
-    font-style: normal;
+    font-size: 0.8rem;
     font-weight: 500;
     line-height: 130%; /* 1.625rem */
 }
@@ -160,6 +176,11 @@ body{
     display: flex;
     justify-content: center;
     cursor: pointer;
+}
+
+.floating_button:active{
+    position: relative;
+    top: 2px;
 }
 
 .floating_button_name{

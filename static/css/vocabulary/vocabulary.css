@@ -5,143 +5,160 @@
     font-style: normal;
 }
 
-*{
+* {
+    list-style: none;
     font-family: 'Pretendard-Regular';
     font-style: normal;
-    list-style: none;
     text-decoration-line: none;
     border-style: none;
-}
-
-body{
-    background-color: #FAFAFA;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
-}
-
-ul{
     padding: 0;
 }
 
-.navBar{
-    position: fixed;
+body{
+    background: #FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 39.0625rem;
+    min-height: 100vh;
+
+}
+
+.navBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 14.0741vh;
+    width: 100%;
+    height: 10vh;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
 }
 
-.navContainer{
+.navWrap {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    gap: 4rem;
     align-items: center;
-    gap: 28.875rem;
+    width: 100%;
+    padding: 0 2rem;
 }
 
-.navList{
-    display: flex;
-    align-items: flex-start;
-    gap: 3.5625rem;
+.navFirst {
+    flex: 1;
 }
 
-.navDicBtn{
-    display: flex;
-    padding: 0.625rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-
-    color: #232427;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 130%; /* 2.6rem */
+.navSecond {
+    flex: 1;
+    font-weight: bold;
 }
 
-.navBoardBtn{
-    display: flex;
-    padding: 0.625rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-
-    color: #232427;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 130%; /* 2.6rem */
-}
-
-.mainLogo{
-    width: 4rem;
-    height: 2.09325rem;
-}
-
-.userInfo{
+/* nav icon list를 수평으로 표시하기 위해 수정 */
+.navicon {
     display: flex;
     align-items: center;
-    gap: 2.1875rem;
+    gap: 1rem;
 }
 
-.userProfile{
-    width: 4.5rem;
-    height: 4.5rem;
+.naviconList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.naviconList li img {
+    width: 24px;
+    height: 26px;
+    fill: #232427;
+}
+
+.navList li {
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFF;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.navList li.selected{
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFE173;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.mainLogo > img {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    width: 48px;
+    height: 25.12px;
+}
+
+.navList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li {
+    white-space: nowrap;
+}
+
+.navList li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     border-radius: 4.5rem;
 }
+
+.userProfile {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
 /*container*/
-
 .container{
+    min-width: 1200px;
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start;
-    justify-items: center; */
-    gap: 24px;
-    padding-top: 14.0741vh;
-    margin: 4.5rem 22.5rem;
-    padding-left: 6.43rem;
-    padding-right: 6.43rem;
+    justify-items: center;
+    margin-top: 10vh;
+    padding-top: 3rem;
 }
 
-.guideContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.guideTxt{
+/* fix부분 */
+.fix > p{
     color: #232427;
     font-size: 2rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 130%; /* 2.6rem */
+    line-height: 130%; 
+    margin-bottom: 1.5rem;
 }
 
-.guideBtn{
-    display: flex;
-    align-items: flex-end;
-    gap: 12px;
-}
-
-.guideBtn > input{
+.delSelect{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     background: #D9D9D9;
 
-    width: 5.152vw;
-    height: 5.5556vh;
+    width: 6.375rem;
+    height: 3.75rem;
     color: #232427;
     text-align: center;
     font-size: 20px;
@@ -153,44 +170,66 @@ ul{
     box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
 }
 
-.vocaContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+.delSelect:active{
+    position: relative;
+    top: 2px;
 }
 
-.savedWordTxt{
+.main{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 질문 부분 */
+.main_mword > p{
+    width: 17.375rem;
     color: #232427;
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 2.275rem */
+    margin-top: 4rem;
+    margin-bottom: 0.75rem;
 }
 
-.savedWordList{
+/* 단어 부분 */
+.word_container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5rem;
-    row-gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.88rem;
+    margin-top: 3rem;
 }
 
-.savedWordCard{
+.word{
     width: 17.375rem;
     height: 12.5rem;
-    padding: 1.51rem;
-
     border-radius: 1.25rem;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    cursor: pointer;
 }
 
-.wordCardTitle{
+.word:active{
+    position: relative;
+    top: 2px;
+}
+
+.word:hover{
+    opacity: 0.8;
+}
+
+.word_name{
+    margin-top: 0.86rem;
+    margin-left: 1.48rem;
+    column-count: 2;
+    column-gap: 8rem;
+}
+
+.word_name > p{
+    width: 9.455rem;
+    height: 1.5rem;
     color: #232427;
     font-size: 1.25rem;
     font-style: normal;
@@ -198,38 +237,178 @@ ul{
     line-height: normal;
 }
 
-.wordCardTop{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.word_name > img{
+    width: 2.36931rem;
+    height: 2.25rem;
 }
 
-.wordCardContent{
+.word_what{
+    width: 14.35644rem;
+    height: 6.27069rem;
+    margin-top: 0.75rem;
+}
+
+.word_what > p{
     color: #232427;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 1.6875rem */
+    margin-left: 1.5rem;
+}
 
-    width: 14.35644rem;
-    height: 6.27069rem;
+.word_heart{
+    width: 1.233rem;
+    height: 1rem;
+    margin-top: 0.34rem;
+    margin-left: 1.48rem;
+    column-count: 2;
+}
+
+.word_heart > p{
+    margin-left: 0.62rem;
+    color: #232427;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+/* 페이지네이션 */
+
+.pagenation{
+    display: flex;
+    margin-top: 4.5rem;
+    width: 75.125rem;
+    margin-left: -3rem;
+    justify-content: center;
+}
+
+.pagination_container{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pre{
+    width: 3rem;
+    height: 3rem;
+}
+
+.pag_btn.current {
+    background: #FFD700; /* 노란색 배경 */
+    color: #232427; /* 검은색 글자 색상 */
+}
+
+.pag_btn{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
+    border: none;
+    cursor: pointer;
+}
+
+.pag_btn > p{
+    color: #232427;
+    align-items: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem; /* 100% */
+    margin: 0;
+}
+
+.pag_btn:active{
+    position: relative;
+    top: 2px;
+}
+
+.pag_btn:hover{
+    opacity: 0.8;
+}
+
+/*퀴즈 버튼*/
+.quizWrap{
+    margin-top: 3rem;   
+    display: flex;
+    justify-content: center;
 }
 
 .quizBtn{
-    width: 100%;
-    height: 3.75rem;
+    width: 50%;
+    padding: 1rem;
     border-radius: 1.875rem;
-    background: #FFE173;    
-    /* Drop Shadow */
+    background: #FFE173;
     box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
+    cursor: pointer;
 }
 
-.quizBtn > span{
+.quizBtn:hover{
+    opacity: 0.8;
+}
+
+.quizBtn:active{
+    position: relative;
+    top: 2px;
+}
+
+.quizBtn > p{
+    color: #232427;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 130%; /* 1.625rem */
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.noWordPage{
     display: flex;
-    height: 3.75rem;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.noWordContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.noWordTitle{
+    color: #232427;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 2.6rem */
+}
+
+.noWordSymbol{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+
+.noWordContent{
+    color: #232427;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.875rem */
+}
+
+.wordBrowserBtn{
+    cursor: pointer;
+    border-radius: 1.875rem;
+    background: #FFF;
 
     color: #232427;
     text-align: center;
@@ -237,4 +416,18 @@ ul{
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 1.625rem */
+                
+    width: 14.6875rem;
+    height: 3.75rem;
+    /* Drop Shadow */
+    box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
+}
+
+.wordBrowserBtn:hover{
+    opacity: 0.8;
+}
+
+.wordBrowserBtn:active{
+    position: relative;
+    top: 2px;
 }

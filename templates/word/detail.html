@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/word_detail.css">
+    <script src="https://kit.fontawesome.com/ba49d39b5e.js" crossorigin="anonymous"></script>
+    <title>이음 : 세대와 세대를 이어주는 단어 사전</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="navWrap">
+            <div class="navFirst">
+                <a class="mainLogo" href="#"><img src="/static/img/icon/Logo.png" alt="로고 아이콘"></a>
+            </div>
+            <div class="navSecond">
+                <ul class="navList">
+                    <li><a href="#">사전</a></li>
+                    <li><a href="#">게시판</a></li>
+                </ul>
+            </div>
+            <div class="userInfo">
+                <div class="navicon">
+                    <ul class="naviconList">
+                        <li>
+                            <a href="#"><img src="/static/img/icon/bell-solid 1.png" alt="종 아이콘"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/static/img/icon/book-bookmark-solid 1.png" alt="북마크 아이콘"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a href=""><img class="userProfile" src="/static/img/profile/원숭이.png" alt="유저프로필 사진"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="word_detail_leftContainer">
+        <div class="word_detail_header">
+            <p id="word_title">어쩔티비</p>
+            <img id="word_age_icon" src="/static/img/age/age_10.png" alt="10대">
+        </div>
+        <div class="word_detail_image">
+            <img src="/static/img/example.png" alt="단어 설명 사진">
+        </div>
+        <div class="word_detail_mean">
+            <p>어쩌라고 가서 티비나 봐</p>
+        </div>
+        <div class="word_detail_content">
+            <p>신조어 중에서는 드물게 기원이 상당히 불분명한 편이다. 해당 신조어의 기원은 10대 초중반에서 시작되었다가 커뮤니티 등지와 유튜브 방송 등으로 점차 퍼져나가면서 밈화 되었다는 설이 지배적이다. 어감 자체가 결국 상대방이 이야기하는 것을 차단함과 동시에 더 이상 듣기 싫다는 의미는 물론 조롱의 의미도 함께 담고 있다.
+                일단 '어쩔TV'라는 이름의 실제 방송 채널은 이 말이 유행하기 시작한 시점에는 유튜브 등을 뒤져봐도 존재하지 않았다. 그래서 아래 여러 설처럼 뭔가 비유적인 의미나 줄임말로 해석하는 게 대부분이다.</p>
+        </div>
+        <div class="word_detail_iconcontainer">
+            <p id="word_like"><i class="fa-regular fa-heart" id="heart_icon" onclick="toggleHeart()"></i><span id="like_count">0</span></p>
+            <p id="word_restore"><i class="fa-regular fa-bookmark" id="bookmark_icon" onclick="toggleBookmark()"></i> 단어장에 담기</p> 
+        </div>
+        <div class="word_detail_userinfo">
+            <p>작성자 : 귀여운 원숭이</p>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_0">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 157.png.png" alt="돌 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_0.png" alt="돌 이미지예유">
+            </div>
+            <div class="word_detail_userlevel_container" id="userlevel_500">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 158.png" alt="대리석 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_500.png" alt="대리석 이미지예유">
+            </div>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_1500">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 160.png" alt="청금석 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_1500.png" alt="청금석 이미지예유">
+            </div>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_3000">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 159.png" alt="산호 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_3000.png" alt="산호 이미지예유">
+            </div>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_7000">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 162.png" alt="진주 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_7000.png" alt="진주 이미지예유">
+            </div>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_15000">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 161.png" alt="자수정 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_15000.png" alt="자수정 이미지예유">
+            </div>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_35000">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 163.png" alt="토파즈 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_35000.png" alt="토파즈 이미지예유">
+            </div>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_70000">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 164.png" alt="다이아몬드 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_70000.png" alt="다이아몬드 이미지예유">
+            </div>
+            <div style="display: none;" class="word_detail_userlevel_container" id="userlevel_100000">
+                <img id="userlevel_frame" src="/static/img/icon/Frame 165.png" alt="에메랄드 이미지예유">
+                <img id="userlevel_icon" src="/static/img/icon/userlevel_icon_100000.png" alt="에메랄드 이미지예유">
+            </div>
+        </div>
+        <div class="word_detail_hrefcontainer">
+            <a href="#">수정하기</a>
+            <a href="#">삭제하기</a>
+        </div>
+    </div>
+    <div class="word_detail_rightContainer">
+        <input type="text" class="word_detail_search" id="searchInput" placeholder="다른단어 검색하기"  onfocus="clearPlaceholder()">
+        <button class="word_detail_searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="detail_tab" id="changing_inform_tab">
+            <p class="tab_title">수정 요청</p>
+            <div class="tab_content">
+                <div class="tab_content_container">
+                    <div class="tab_content_title">수정 요청 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+                <div class="tab_content_container">
+                    <div class="tab_content_title">수정 요청 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+                <div class="tab_content_container">
+                    <div class="tab_content_title">수정 요청 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+                <div class="tab_content_container">
+                    <div class="tab_content_title">수정 요청 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+            </div>
+        </div>
+        <div class="detail_tab" id="relative_question_tab">
+            <p class="tab_title">관련된 질문</p>
+            <div class="tab_content">
+                <div class="tab_content_container">
+                    <div class="tab_content_title">질문 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+                <div class="tab_content_container">
+                    <div class="tab_content_title">질문 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+                <div class="tab_content_container">
+                    <div class="tab_content_title">질문 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+                <div class="tab_content_container">
+                    <div class="tab_content_title">질문 제목</div>
+                    <div class="tab_content_date">23/08/11 23:29</div>
+                </div>
+            </div>
+        </div>
+         <div class="detail_tab" id="word_register_tab">
+            <p class="tab_title">김지훈 님의 등록 단어</p>
+            <div class="tab_content">
+                <p>어쩔티비</p>
+                <p>저쩔티비</p>
+                <p>안알랴줌</p>
+                <p>안물안궁</p>
+            </div>
+         </div>
+         <div class="detail_tab" id="word_like_tab">
+            <p class="tab_title">좋아요 연령 분석</p>
+         </div>
+         <p id="word_detail_footer">나의 세대 단어를 등록하고 경험치를 쌓아보세요!<a href="word_register.html">등록하기</a></p>
+    </div>
+    <div id="floating_button_wrap">
+        <p class="floating_button_name"> 단어장에 담기 </p>
+        <a class="floating_button" href="#"><img src="/static/img/icon/open_file_folder_3d.png" alt="플로팅버튼 이미지"></a>
+    </div>
+</body>
+    <script src="/static/js/word_detail.js"></script>
+    <script src="/static/js/navList_check.js"></script>
+</html>

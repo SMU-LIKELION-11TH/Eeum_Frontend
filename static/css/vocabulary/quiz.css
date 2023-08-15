@@ -11,126 +11,140 @@
     font-style: normal;
     text-decoration-line: none;
     border-style: none;
+    margin: 0;
+    padding: 0;
 }
-
 
 body{
-    background: #FAFAFA;
+    background-color: #FAFAFA;
     min-height: 100vh;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
+    align-items: center; */
 }
 
-
-
-.navBar{
+.navBar {
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    /* gap: 39.0625rem; */
     top: 0;
     left: 0;
     width: 100%;
-    height: 14.0741vh;
+    height: 10vh;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
 }
 
-.navList{
+.navWrap {
     display: flex;
+    gap: 4rem;
     align-items: center;
-    gap: 39.0625rem;
+    width: 100%;
+    padding: 0 2rem;
 }
 
-.navList li{
+.navFirst {
+    flex: 1;
+}
+
+.navSecond {
+    flex: 1;
+    font-weight: bold;
+}
+
+
+/* nav icon list를 수평으로 표시하기 위해 수정 */
+.navicon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.naviconList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.naviconList li img {
+    width: 30px;
+    height: 32px;
+    fill: #232427;
+}
+
+
+.navList li {
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFF;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.navList li.selected{
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFE173;
+    border-radius: 2rem;
+    padding: 8px 12px;
+}
+
+.mainLogo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navList {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li {
     white-space: nowrap;
-    cursor: pointer;
 }
 
-
-.navSecond{
-    display: flex;
-    flex-direction: row;
-    gap: 3.56rem;
-    /* margin-left: 39.06rem;
-    margin-right: 28.88rem; */
+.navList li a {
+    text-decoration: none;
+    color: #333;
 }
 
-.navThird{
-    display: flex;
-    flex-direction: row;
-    gap: 2.19rem;
-    align-items: center;
-}
-
-.navWrap{
-    display: flex;
-    flex-direction: row;
-    gap: 28.875rem;
-    align-items: center;
-}
-
-.navDicBtn{
-    display: flex;
-    padding: 0.625rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-
-    color: #232427;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 130%; /* 2.6rem */
-}
-
-.navBoardBtn{
-    display: flex;
-    padding: 0.625rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-
-    color: #232427;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 130%; /* 2.6rem */
-}
-
-.mainLogo{
-    width: 4rem;
-    height: 2.09325rem;
-}
-
-.userInfo{
+.userInfo {
     display: flex;
     align-items: center;
-    gap: 2.1875rem;
-}
-
-.userProfile{
-    width: 4.5rem;
-    height: 4.5rem;
+    gap: 2rem;
     border-radius: 4.5rem;
+}
+
+.userProfile {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
 }
 
 /*container*/
 .container{
+    min-width: 994px; 
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
+    margin-top: 10vh;
 }
 
-.quizContainer{
+.quizWrap{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+    margin-top: 6rem;
 }
 
 .quizQuestion{
@@ -142,16 +156,17 @@ body{
     line-height: 130%; /* 2.6rem */
 }
 
-.answerContainer{
+.choiceContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
 }
 
-.answerCard{
+.choiceCard{
     width: 36.4375rem;
     height: 3.75rem;
+    border-color: #FFF;
     border-radius: 1.875rem;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
@@ -159,13 +174,194 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.choiceCard:hover{
+    opacity: 0.8;
+    background-color: #FFE173;
+}
+
+.choiceCard:active{
+    position: relative;
+    top: 2px;
+}
+
+.choiceTxt{
+    color: #232427;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 130%; /* 1.625rem */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.scoreContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/*result*/
+.quizScore{
+    color: #232427;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 2.6rem */
+}
+
+.scoreContent{
+    color: #232427;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.expContent{
+    color: #232427;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.scoreWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviewContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.reviewTxt{
+    color: #232427;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 2.275rem */
+}
+
+.reviewWordList{
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 3rem;
+}
+
+.word{
+    width: 17.375rem;
+    height: 12.5rem;
+    border-radius: 1.25rem;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
+}
+
+.word:hover{
+    opacity: 0.8;
+}
+
+.word:active{
+    position: relative;
+    top: 2px;
+}
+
+.word_name{
+    margin-top: 0.86rem;
+    margin-left: 1.48rem;
+    column-count: 2;
+    column-gap: 8rem;
+}
+
+.word_name > p{
+    width: 9.455rem;
+    height: 1.5rem;
+    color: #232427;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.word_name > img{
+    width: 2.36931rem;
+    height: 2.25rem;
+}
+
+.word_what{
+    width: 14.35644rem;
+    height: 5rem;
+}
+
+.word_what > p{
+    color: #232427;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 1.6875rem */
+    margin-left: 1.5rem;
+}
+
+.word_heart{
+    width: 1.233rem;
+    height: 1rem;
+    margin-left: 1.48rem;
+    column-count: 2;
+}
+
+.word_heart > p{
+    margin-left: 0.62rem;
+    color: #232427;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.wordBrowserBtn{
+    cursor: pointer;
+    border-radius: 1.875rem;
+    background: #FFF;
 
     color: #232427;
     text-align: center;
     font-size: 1.25rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 130%; /* 1.625rem */
+                
+    width: 14.6875rem;
+    height: 3.75rem;
+    /* Drop Shadow */
+    box-shadow: 0px 4px 4px 0px rgba(160, 160, 160, 0.25);
+}
 
-    cursor: pointer;
+.wordBrowserBtn:hover{
+    opacity: 0.8;
+}
+
+.wordBrowserBtn:active{
+    position: relative;
+    top: 2px;
+}
+
+ul, li{
+    padding: 0;
+    margin: 0;
 }
