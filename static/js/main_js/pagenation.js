@@ -456,7 +456,7 @@ function initializePagination() {
 
 //ajax 시작=========================================
 $.ajax({
-    url: 'http://3.34.3.84/api/word/all/',
+    url: '/api/word/all/',
     type: "GET",
     dataType: "JSON",
     headers: {},
@@ -602,7 +602,7 @@ function displayPageItems(pageNumber, data) {
 
 // ajax 시작=========================================
 $.ajax({
-    url: 'http://3.34.3.84/api/word/all/',
+    url: '/api/word/all/',
     type: "GET",
     dataType: "JSON",
     headers: {},

@@ -10,7 +10,7 @@ function refreshAccessToken(response) {
         console.log(response.refresh)
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -166,7 +166,7 @@ var response = {
 
 $.ajax({
     type: "POST",
-    url: "http://3.34.3.84/api/question/list/", // 실제 URL로 변경해야 합니다.
+    url: "/api/question/list/", // 실제 URL로 변경해야 합니다.
     headers: {
         'Authorization': `Bearer ${localStorage.getItem('access')}`
     },
@@ -192,7 +192,7 @@ $.ajax({
 
                     $.ajax({
                         type: 'GET',
-                        url: 'http://3.34.3.84/api/question/list/',
+                        url: '/api/question/list/',
                         contentType: 'application/json',
 
                         beforeSend: function (xhr) {

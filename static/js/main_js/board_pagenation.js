@@ -9,7 +9,7 @@ function refreshAccessToken(response) {
         console.log(response.refresh)
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -148,7 +148,7 @@ function createPaginationButtons(totalPages, currentPage) {
 
 $.ajax({
     type: "GET",
-    url: "http://3.34.3.84/api/account/user/edit/list/", // 실제 URL로 변경해야 합니다.
+    url: "/api/account/user/edit/list/", // 실제 URL로 변경해야 합니다.
     headers: {
         'Authorization': `Bearer ${localStorage.getItem('access')}`
     },
@@ -172,7 +172,7 @@ $.ajax({
 
                     $.ajax({
                         type: 'GET',
-                        url: 'http://3.34.3.84/api/account/user/edit/list/',
+                        url: '/api/account/user/edit/list/',
                         contentType: 'application/json',
 
                         beforeSend: function (xhr) {

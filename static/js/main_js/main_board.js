@@ -65,7 +65,7 @@ function createQnaCard(item) {
 
 //ajax 시작=========================================
 $.ajax({
-    url: 'http://3.34.3.84/api/question/list/',
+    url: '/api/question/list/',
     type: "POST",
     dataType: "JSON",
     data: { sort: "조회수", type: "등록 요청" },

@@ -4,7 +4,7 @@ function refreshAccessToken(response) {
         console.log(response.refresh)
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     $.ajax({
         type:"GET",
-        url: "http://3.34.3.84/api/account/user/",
+        url: "/api/account/user/",
         headers: {
             'Authorization' : `Bearer ${localStorage.getItem('access')}`
         },
@@ -47,7 +47,7 @@ $(document).ready(function () {
                 .then(function (access_token) {
                     $.ajax({
                         type: 'GET',
-                        url: 'http://3.34.3.84/api/account/user/',
+                        url: '/api/account/user/',
                         contentType: 'application/json',
                         dataType: 'json',
                         beforeSend: function (xhr) {
@@ -128,7 +128,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://3.34.3.84/api/search/word/exists/",
+            url: "/api/search/word/exists/",
             data: JSON.stringify({
                 keyword: document.getElementById('word_register_input').value
             }),
@@ -287,7 +287,7 @@ $(document).ready(function () {
         //     .then(function (access_token) {
         //         $.ajax({
         //             type: 'POST',
-        //             url: 'http://3.34.3.84/api/word/create/',
+        //             url: '/api/word/create/',
         //             contentType: 'application/json',
 
         //             beforeSend: function () {
@@ -307,7 +307,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://3.34.3.84/api/word/create/", // 실제 URL로 변경해야 합니다.
+            url: "/api/word/create/", // 실제 URL로 변경해야 합니다.
             headers: {
                 'Authorization' : `Bearer ${localStorage.getItem('access')}`
             },
@@ -327,7 +327,7 @@ $(document).ready(function () {
                   .then(function (access_token) {
                       $.ajax({
                           type: 'POST',
-                          url: 'http://3.34.3.84/api/word/create/',
+                          url: '/api/word/create/',
                           contentType: 'application/json',
       
                           beforeSend: function () {

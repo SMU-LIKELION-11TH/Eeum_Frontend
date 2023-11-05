@@ -135,7 +135,7 @@ sortingSelect.addEventListener("change", function () {
 
     // Ajax 요청을 통해 새로운 데이터 가져오기
     $.ajax({
-        url: 'http://3.34.3.84/api/question/list/',
+        url: '/api/question/list/',
         type: "POST",
         dataType: "JSON",
         data: { sort: sortType, type: "등록 요청" },
@@ -158,7 +158,7 @@ sortingSelect.addEventListener("change", function () {
 
 
 $.ajax({
-    url: 'http://3.34.3.84/api/question/list/',
+    url: '/api/question/list/',
     type: "POST",
     dataType: "JSON",
     data: { sort: "최신", type: "등록 요청" },

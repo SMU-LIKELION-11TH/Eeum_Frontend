@@ -58,7 +58,7 @@ function refreshAccessToken(response) {
     return new Promise((resolve, reject) => {
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -204,7 +204,7 @@ function changeData(newName) {
 
     $.ajax({
         type: 'PUT',
-        url: 'http://3.34.3.84/api/account/user/', // 슬래시 하나로 수정
+        url: '/api/account/user/', // 슬래시 하나로 수정
         contentType: 'application/json',
         data: JSON.stringify(requestData), // 데이터를 JSON 문자열로 변환
         beforeSend: function(xhr) {
@@ -218,7 +218,7 @@ function changeData(newName) {
                 .then(
                     $.ajax({
                         type: 'PUT',
-                        url: 'http://3.34.3.84/api/account/user/', // 슬래시 하나로 수정
+                        url: '/api/account/user/', // 슬래시 하나로 수정
                         contentType: 'application/json',
                         data: JSON.stringify(requestData), // 데이터를 JSON 문자열로 변환
                         beforeSend: function(xhr) {
@@ -259,7 +259,7 @@ function changeName(newName) {
 function getUserInfo() {
     $.ajax({
         type: 'GET',
-        url: 'http://3.34.3.84/api/account/user/',
+        url: '/api/account/user/',
         contentType: 'application/json',
         beforeSend: function(xhr) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -272,7 +272,7 @@ function getUserInfo() {
                 .then(
                     $.ajax({
                         type: 'GET',
-                        url: 'http://3.34.3.84/api/account/user/', // 슬래시 하나로 수정
+                        url: '/api/account/user/', // 슬래시 하나로 수정
                         contentType: 'application/json',
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -345,7 +345,7 @@ function userInfo(nickname, age){
 function getUserWordData(){
     $.ajax({
         type: 'GET',
-        url: 'http://3.34.3.84/api/account/user/word/',
+        url: '/api/account/user/word/',
         contentType: 'application/json',
         beforeSend: function(xhr) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -358,7 +358,7 @@ function getUserWordData(){
                 .then(
                     $.ajax({
                         type: 'GET',
-                        url: 'http://3.34.3.84/api/account/user/word/', // 슬래시 하나로 수정
+                        url: '/api/account/user/word/', // 슬래시 하나로 수정
                         contentType: 'application/json',
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -397,7 +397,7 @@ function getUserWordData(){
 function getUserQuestionData(){
     $.ajax({
         type: 'GET',
-        url: 'http://3.34.3.84/api/account/user/question/',
+        url: '/api/account/user/question/',
         contentType: 'application/json',
         beforeSend: function(xhr) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -410,7 +410,7 @@ function getUserQuestionData(){
                 .then(
                     $.ajax({
                         type: 'GET',
-                        url: 'http://3.34.3.84/api/account/user/question/', // 슬래시 하나로 수정
+                        url: '/api/account/user/question/', // 슬래시 하나로 수정
                         contentType: 'application/json',
                         beforeSend: function(xhr) {
                             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -449,7 +449,7 @@ function getUserQuestionData(){
 function getUserReuestData(){
     $.ajax({
         type: 'GET',
-        url: 'http://3.34.3.84/api/account/user/edit/',
+        url: '/api/account/user/edit/',
         contentType: 'application/json',
         beforeSend: function(xhr) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -460,7 +460,7 @@ function getUserReuestData(){
             if(response.status === 401){
                 $.ajax({
                     type: 'GET',
-                    url: 'http://3.34.3.84/api/account/user/edit/',
+                    url: '/api/account/user/edit/',
                     contentType: 'application/json',
                     beforeSend: function(xhr) {
                         xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);

@@ -84,7 +84,7 @@ function createWordCard(item) {
 
 //ajax 시작=========================================
 $.ajax({
-    url: 'http://3.34.3.84/api/word/most_views/',
+    url: '/api/word/most_views/',
     type: "GET",
     dataType: "JSON",
     headers: {},

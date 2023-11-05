@@ -4,7 +4,7 @@ function refreshAccessToken(response) {
             console.log(response.refresh)
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -69,7 +69,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://3.34.3.84/api/search/word/exists/",
+            url: "/api/search/word/exists/",
             data: JSON.stringify({
                 keyword: document.getElementById('word_question_input').value
             }),
@@ -149,7 +149,7 @@ $(document).ready(function () {
             .then(function (access_token) {
                 $.ajax({
                     type: 'POST',
-                    url: 'http://3.34.3.84/api/question/questioncreate/',
+                    url: '/api/question/questioncreate/',
                     contentType: 'application/json',
                     data: JSON.stringify(questionData),
                     beforeSend: function () {
@@ -169,7 +169,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://3.34.3.84/api/question/questioncreate/", // 실제 URL로 변경해야 합니다.
+            url: "/api/question/questioncreate/", // 실제 URL로 변경해야 합니다.
             headers: {
                  'Authorization' : `Bearer ${localStorage.getItem('access')}`
             },

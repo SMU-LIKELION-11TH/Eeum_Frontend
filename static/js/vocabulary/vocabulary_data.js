@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function getWordData(){
         $.ajax({
             type: "GET",
-            url: 'http://3.34.3.84/api/vocabulary/',
+            url: '/api/vocabulary/',
             contentType: 'application/json',
             beforeSend: function(xhr) {
                 xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
@@ -217,7 +217,7 @@ function refreshAccessToken(response) {
     return new Promise((resolve, reject) => {
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -240,7 +240,7 @@ function refreshAccessToken(response) {
 function getUserInfo() {
     $.ajax({
         type: 'GET',
-        url: 'http://3.34.3.84/api/account/user/',
+        url: '/api/account/user/',
         contentType: 'application/json',
         beforeSend: function(xhr) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);

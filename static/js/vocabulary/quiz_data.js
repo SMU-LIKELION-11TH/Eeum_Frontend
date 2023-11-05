@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: 'POST',
-                url: 'http://3.34.3.84/api/account/refresh/',
+                url: '/api/account/refresh/',
                 contentType: 'application/json',
                 dataType: 'json',
                 data: JSON.stringify({
@@ -56,7 +56,7 @@ var score = 0;
 function getQuizData(){
     $.ajax({
         type: 'GET',
-        url: 'http://3.34.3.84/api/vocabulary/quiz/',
+        url: '/api/vocabulary/quiz/',
         contentType: 'application/json',
         beforeSend: function(xhr) {
             xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem("access"));
@@ -115,7 +115,7 @@ function createChoiceCard(data, index) {
     
             $.ajax({
                 type: 'POST',
-                url: 'http://3.34.3.84/api/vocabulary/quiz/',
+                url: '/api/vocabulary/quiz/',
                 contentType: 'application/json',
                 data: JSON.stringify({
                     "point" : score*10
@@ -129,7 +129,7 @@ function createChoiceCard(data, index) {
                         .then(function (access_token) {
                                     $.ajax({
                                         type: 'POST',
-                                        url: 'http://3.34.3.84/api/vocabulary/quiz/',
+                                        url: '/api/vocabulary/quiz/',
                                         contentType: 'application/json',
                                         data: JSON.stringify({
                                             "point": score*10

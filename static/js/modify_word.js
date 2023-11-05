@@ -3,7 +3,7 @@ function refreshAccessToken(response) {
     return new Promise((resolve, reject) => {
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -95,7 +95,7 @@ $(document).ready(function () {
         .then(function (access_token) {
             $.ajax({
                 type: 'PUT',
-                url: 'http://3.34.3.84/api/word/update/'+localStorage.getItem("word_id")+'/',
+                url: '/api/word/update/'+localStorage.getItem("word_id")+'/',
                 contentType: 'application/json',
                 data: JSON.stringify({ word_id: localStorage.getItem("word_id"),
                 mean: localStorage.getItem("mean"),
@@ -118,7 +118,7 @@ $(document).ready(function () {
 
     // $.ajax({
     //     type: "PUT",
-    //     url:"http://3.34.3.84/api/word/update/" + localStorage.getItem("word_id")+"/",
+    //     url:"/api/word/update/" + localStorage.getItem("word_id")+"/",
     //     headers:{
     //         'Authorization': `Bearer ${localStorage.getItem('access')}`
     //     },
@@ -207,7 +207,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "PUT",
-            url:"http://3.34.3.84/api/word/update/" + localStorage.getItem("word_id")+"/", // 실제 URL로 변경해야 합니다.
+            url:"/api/word/update/" + localStorage.getItem("word_id")+"/", // 실제 URL로 변경해야 합니다.
             headers: {
                 'Authorization' : `Bearer ${localStorage.getItem('access')}`
             },
@@ -226,7 +226,7 @@ $(document).ready(function () {
             .then(function (access_token) {
                 $.ajax({
                     type: 'PUT',
-                    url:"http://3.34.3.84/api/word/update/" + localStorage.getItem("word_id")+"/",
+                    url:"/api/word/update/" + localStorage.getItem("word_id")+"/",
                     contentType: 'application/json',
                     beforeSend: function () {
                         xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.getItem('access'));

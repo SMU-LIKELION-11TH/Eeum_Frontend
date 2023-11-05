@@ -14,7 +14,7 @@ function refreshAccessToken(response) {
         console.log(response.refresh)
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -160,7 +160,7 @@ function addComment() {
 
     $.ajax({
         type: "POST",
-        url: "http://3.34.3.84/api/word/comment/create/", // 실제 URL로 변경해야 합니다.
+        url: "/api/word/comment/create/", // 실제 URL로 변경해야 합니다.
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('access')}`
         },
@@ -182,7 +182,7 @@ function addComment() {
 
                         $.ajax({
                             type: 'POST',
-                            url: 'http://3.34.3.84/api/word/comment/create/',
+                            url: '/api/word/comment/create/',
                             contentType: 'application/json',
 
                             beforeSend: function (xhr) {
@@ -217,7 +217,7 @@ commentBtn.addEventListener("click", addComment);
 
 //ajax시작===================================================
 $.ajax({
-    url: 'http://3.34.3.84/api/word/edit/detail/',
+    url: '/api/word/edit/detail/',
     type: "POST",
     dataType: 'json',
     data: {
@@ -261,7 +261,7 @@ function countqhelpView(data) {
 
     $.ajax({
         type: "POST",
-        url: "http://3.34.3.84/api/word/comment/like/", // 실제 URL로 변경해야 합니다.
+        url: "/api/word/comment/like/", // 실제 URL로 변경해야 합니다.
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('access')}`
         },
@@ -289,7 +289,7 @@ function countqhelpView(data) {
 
                         $.ajax({
                             type: 'POST',
-                            url: 'http://3.34.3.84/api/word/comment/like/',
+                            url: '/api/word/comment/like/',
                             contentType: 'application/json',
 
                             beforeSend: function (xhr) {
@@ -330,7 +330,7 @@ function countqView() {
 
     $.ajax({
         type: "POST",
-        url: "http://3.34.3.84/api/word/edit/like/", // 실제 URL로 변경해야 합니다.
+        url: "/api/word/edit/like/", // 실제 URL로 변경해야 합니다.
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('access')}`
         },
@@ -354,7 +354,7 @@ function countqView() {
 
                         $.ajax({
                             type: 'POST',
-                            url: 'http://3.34.3.84/api/word/edit/like/',
+                            url: '/api/word/edit/like/',
                             contentType: 'application/json',
 
                             beforeSend: function () {

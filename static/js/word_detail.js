@@ -94,7 +94,7 @@ function refreshAccessToken(response) {
             console.log(response.refresh)
         $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/refresh/',
+            url: '/api/account/refresh/',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -142,7 +142,7 @@ $(document).ready(function () {
         
         $.ajax({
             type: "POST",
-            url: "http://3.34.3.84/api/word/like/",
+            url: "/api/word/like/",
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('access')}`
             },
@@ -156,7 +156,7 @@ $(document).ready(function () {
                         .then(function (access_token) {
                             $.ajax({
                                 type: 'POST',
-                                url: 'http://3.34.3.84/api/word/like/',
+                                url: '/api/word/like/',
                                 contentType: 'application/json',
                                 data: JSON.stringify({ word_id: localStorage.getItem("word_id") }),
                                 beforeSend: function (xhr) {
@@ -210,7 +210,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://3.34.3.84/api/vocabulary/",
+            url: "/api/vocabulary/",
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('access')}`
             },
@@ -223,7 +223,7 @@ $(document).ready(function () {
         .then(function (access_token) {
             $.ajax({
                 type: 'POST',
-                url: 'http://3.34.3.84/api/vocabulary/',
+                url: '/api/vocabulary/',
                 contentType: 'application/json',
                 data: JSON.stringify({id:localStorage.getItem("word_id")}),
                 beforeSend: function (xhr) {
@@ -298,7 +298,7 @@ $(document).ready(function () {
     }
     $.ajax({
         type:"POST",
-        url: "http://3.34.3.84/api/word/detail/",
+        url: "/api/word/detail/",
         headers: headers,
         contentType: 'application/json',
         dataType: 'json',
@@ -315,7 +315,7 @@ $(document).ready(function () {
             if(localStorage.getItem("refresh") !== null){
                 $.ajax({
                     type:"GET",
-                    url: "http://3.34.3.84/api/account/user/",
+                    url: "/api/account/user/",
                     headers: {
                         'Authorization' : `Bearer ${localStorage.getItem('access')}`
                     },
@@ -327,7 +327,7 @@ $(document).ready(function () {
                             .then(function (access_token) {
                                 $.ajax({
                                     type: 'GET',
-                                    url: 'http://3.34.3.84/api/account/user/',
+                                    url: '/api/account/user/',
                                     contentType: 'application/json',
                                     dataType: 'json',
                                     beforeSend: function (xhr) {

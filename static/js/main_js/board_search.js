@@ -126,7 +126,7 @@ function getWords() {
 
     //ajax시작===================================================
     $.ajax({
-        url: 'http://3.34.3.84/api/search/question/',
+        url: '/api/search/question/',
         type: "POST",
         data: {
             "keyword": searchInput.value,

@@ -6,7 +6,7 @@ function searchWithInput() {
         window.location.href = "/dictionary/detail.html";
         //ajax시작===================================================
         $.ajax({
-            url: 'http://3.34.3.84/api/search/word/',
+            url: '/api/search/word/',
             type: "POST",
             data: {
                 "keyword": searchInput.value,

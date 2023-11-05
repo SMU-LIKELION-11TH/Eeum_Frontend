@@ -140,8 +140,8 @@ function updatePage() {
 // 옵션 선택에 따른 페이지 업데이트 함수
 function updatePageByOption(selectedOption) {
     const ajaxUrl = selectedOption === "recency"
-        ? "http://3.34.3.84/api/word/recent/"
-        : "http://3.34.3.84/api/word/most_views/";
+        ? "/api/word/recent/"
+        : "/api/word/most_views/";
 
     $.ajax({
         url: ajaxUrl,

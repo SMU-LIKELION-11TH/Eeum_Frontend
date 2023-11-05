@@ -16,7 +16,7 @@ function countqView() {
 
     $.ajax({
         type: "POST",
-        url: "http://3.34.3.84/api/question/questionlike/", // 실제 URL로 변경해야 합니다.
+        url: "/api/question/questionlike/", // 실제 URL로 변경해야 합니다.
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('access')}`
         },
@@ -38,7 +38,7 @@ function countqView() {
 
                         $.ajax({
                             type: 'POST',
-                            url: 'http://3.34.3.84/api/question/questionlike/',
+                            url: '/api/question/questionlike/',
                             contentType: 'application/json',
 
                             beforeSend: function (xhr) {
