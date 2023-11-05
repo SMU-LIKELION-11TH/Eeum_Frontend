@@ -6,13 +6,12 @@ function onclickLogin() {
       Kakao.API.request({
         url: '/v2/user/me',
         success: function(result){
-          alert("로그인 성공!");
           var id = result.id;
           var age = result.kakao_account.age_range;
 
           $.ajax({
             type: 'POST',
-            url: 'http://3.34.3.84/api/account/kakao/callback/',
+            url: '/api/account/kakao/callback/',
             dataType: 'json',
             data: {
               'id': id,
@@ -20,7 +19,7 @@ function onclickLogin() {
             },
         
             success: function(res){
-              alert('로그인을 진짜 성공했습니다.');
+              alert('로그인에 성공했습니다.');
               var access = res.access;
               var refresh = res.refresh;
 
